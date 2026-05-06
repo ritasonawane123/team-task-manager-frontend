@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:8081";
+const API = "https://team-task-manager-backend-production-6601.up.railway.app";
 
 function Project() {
   const [name, setName] = useState("");
