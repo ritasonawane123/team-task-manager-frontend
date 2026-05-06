@@ -7,7 +7,7 @@ function Task({ user, refreshDashboard }) {
   const [tasks, setTasks] = useState([]);
   const [title, setTitle] = useState("");
   const [assignedTo, setAssignedTo] = useState("");
-  const [status, setStatus] = useState("TODO");
+  const [status] = useState("TODO");
   const [dueDate, setDueDate] = useState("");
 
   useEffect(() => {
