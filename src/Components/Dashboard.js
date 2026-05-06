@@ -3,7 +3,7 @@ import axios from "axios";
 import Project from "./Project";
 import Task from "./Task";
 
-const API = "http://localhost:8080";
+const API = "https://team-task-manager-backend-production-6601.up.railway.app";
 
 function Dashboard({ setPage }) {
   const [data, setData] = useState(null);

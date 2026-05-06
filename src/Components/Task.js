@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const API = "http://localhost:8080";
+const API = "https://team-task-manager-backend-production-6601.up.railway.app";
 
 function Task({ user, refreshDashboard }) {
   const [tasks, setTasks] = useState([]);
