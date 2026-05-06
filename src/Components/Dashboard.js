@@ -10,7 +10,7 @@ function Dashboard({ setPage }) {
 
   const user = JSON.parse(localStorage.getItem("user"));
 
-  // 🔄 Fetch dashboard data
+  //Fetch dashboard data
   const fetchDashboard = () => {
     axios
       .get(`${API}/tasks/dashboard`)
@@ -34,7 +34,7 @@ function Dashboard({ setPage }) {
         Welcome, {user?.name} ({user?.role})
       </h4>
 
-      {/* 📊 Cards */}
+      {/*Cards */}
       <div style={grid}>
         <div style={card}>
           <h3>Total</h3>
@@ -57,13 +57,13 @@ function Dashboard({ setPage }) {
         </div>
       </div>
 
-      {/* 👑 ADMIN ONLY */}
+      {/*ADMIN ONLY */}
       {user?.role === "ADMIN" && <Project />}
 
-      {/* 👤 TASK SECTION */}
+      {/*TASK SECTION */}
       <Task user={user} refreshDashboard={fetchDashboard} />
 
-      {/* 🚪 Logout */}
+      {/*Logout */}
       <button
         style={logoutBtn}
         onClick={() => {
@@ -80,7 +80,7 @@ function Dashboard({ setPage }) {
 export default Dashboard;
 
 
-// 🎨 Styles
+//Styles
 const container = {
   padding: "20px",
   textAlign: "center",

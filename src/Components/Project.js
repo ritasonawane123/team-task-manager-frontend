@@ -50,7 +50,7 @@ function Project() {
 
 export default Project;
 
-// 🎨 Styles
+//Styles
 const box = {
   marginTop: "20px",
   padding: "15px",

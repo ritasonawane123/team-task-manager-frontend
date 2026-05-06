@@ -19,7 +19,7 @@ function Task({ user, refreshDashboard }) {
     setTasks(res.data);
   };
 
-  // 👑 ADMIN ONLY
+  //ADMIN ONLY
   const createTask = async () => {
     await axios.post(`${API}/tasks?role=${user.role}`, {
       title,
@@ -31,24 +31,24 @@ function Task({ user, refreshDashboard }) {
 
     alert("Task created");
     fetchTasks();
-    refreshDashboard(); // 🔥 update cards
+    refreshDashboard(); //update cards
   };
 
-  // 👤 MEMBER updates status
+  //MEMBER updates status
   const updateStatus = async (id, newStatus) => {
     await axios.put(`${API}/tasks/${id}`, {
       status: newStatus
     });
 
     fetchTasks();
-    refreshDashboard(); // 🔥 update cards
+    refreshDashboard(); //update cards
   };
 
   return (
     <div style={box}>
       <h3>Tasks</h3>
 
-      {/* 👑 ADMIN - Create Task */}
+      {/* ADMIN - Create Task */}
       {user.role === "ADMIN" && (
         <div>
           <input
@@ -75,7 +75,7 @@ function Task({ user, refreshDashboard }) {
         </div>
       )}
 
-      {/* 👤 MEMBER ONLY - Task List */}
+      {/* MEMBER ONLY - Task List */}
       {user.role === "MEMBER" && (
         <ul>
           {tasks.map((t) => (

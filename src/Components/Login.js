@@ -14,16 +14,16 @@ function Login({ setPage }) {
         password,
       });
 
-      // 🔍 DEBUG (see this in console)
+      //DEBUG (see this in console)
       console.log("LOGIN RESPONSE:", res.data);
 
-      // 🔥 Clear old user (important)
+      //Clear old user (important)
       localStorage.clear();
 
-      // 🔥 Store new logged-in user
+      //Store new logged-in user
       localStorage.setItem("user", JSON.stringify(res.data));
 
-      // 🔥 Navigate to dashboard
+      // Navigate to dashboard
       setPage("dashboard");
 
     } catch (err) {
@@ -70,7 +70,7 @@ function Login({ setPage }) {
 export default Login;
 
 
-// 🎨 Styles
+//Styles
 const title = {
   position: "absolute",
   top: "80px",

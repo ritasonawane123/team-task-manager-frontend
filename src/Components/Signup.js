@@ -8,7 +8,7 @@ function Signup({ setPage }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // 🔥 Default role = ADMIN (for testing clarity)
+  //Default role = ADMIN (for testing clarity)
   const [role, setRole] = useState("ADMIN");
 
   const signup = async () => {
@@ -53,7 +53,7 @@ function Signup({ setPage }) {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        {/* ✅ Controlled dropdown */}
+        {/*Controlled dropdown */}
         <select value={role} onChange={(e) => setRole(e.target.value)}>
           <option value="ADMIN">ADMIN</option>
           <option value="MEMBER">MEMBER</option>
@@ -74,7 +74,7 @@ function Signup({ setPage }) {
 
 export default Signup;
 
-// 🎨 Styles
+//Styles
 const container = {
   display: "flex",
   justifyContent: "center",
